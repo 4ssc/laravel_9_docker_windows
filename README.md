@@ -17,7 +17,7 @@ docker compose exec php bash
 ```
 ### Laravel 9のインストール
 ```
-composer create-project --prefer-dist "laravel/laravel=8.*" .
+composer create-project --prefer-dist "laravel/laravel=9.*" .
 ```
 ### 表示確認
 http://localhost:8080/
