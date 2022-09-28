@@ -14,7 +14,7 @@ services:
       context: .
       dockerfile: ./docker/nginx/Dockerfile
     ports:
-      - 8080:80
+      - 80:80
     depends_on:
       - php
     volumes:
@@ -33,7 +33,9 @@ services:
       MYSQL_ROOT_PASSWORD: password
       TZ: 'Asia/Tokyo'
     volumes:
-      - mysql-volume:/ver/lib/mysql
+      - mysql-volume:/var/lib/mysql
+      - mysql-log-volume:/var/log/mysql
 
 volumes:
   mysql-volume:
+  mysql-log-volume:
